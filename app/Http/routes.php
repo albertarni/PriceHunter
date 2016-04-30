@@ -11,4 +11,12 @@
 |
 */
 
-Route::resource('/', 'HomeController');
+Route::resource('/', 'HomeController', [
+    'names' => [
+        'index' => 'home.index'
+    ]
+]);
+Route::resource('/shop', 'ShopController');
+Route::resource('/product', 'ProductController');
+Route::resource('/cart', 'CartController');
+Route::resource('/checkout', 'CheckoutController');

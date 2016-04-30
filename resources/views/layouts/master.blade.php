@@ -7,7 +7,6 @@
 <body>
 
 @include('includes.header')
-@include('includes.slider')
 
 @yield('content')
 
