@@ -13,11 +13,16 @@
 
 Route::resource('/', 'HomeController', [
     'names' => [
-        'index' => 'home.index'
-    ]
+        'index' => 'home.index',
+    ],
+    'only' => 'index'
 ]);
-Route::resource('/shop', 'ShopController');
-Route::resource('/product', 'ProductController');
-Route::resource('/cart', 'CartController');
-Route::resource('/checkout', 'CheckoutController');
-Route::resource('/scrape', 'ScrapeController');
+
+Route::resource('/products', 'ProductsController', ['only' => 'index']);
+Route::resource('/cart', 'CartController', ['only' => 'index']);
+Route::resource('/checkout', 'CheckoutController', ['only' => 'index']);
+Route::resource('/scrape', 'ScrapeController', ['only' => 'index']);
+
+Route::group(['namespace' => 'Api', 'prefix' => 'api/v1'], function() {
+    Route::resource('products', 'ProductsController');
+});

@@ -1,3 +1,6 @@
+<!-- all.js -->
+<script src="{{asset('js/all.js')}}"></script>
+
 <!-- Latest jQuery form server -->
 <script src="https://code.jquery.com/jquery.min.js"></script>
 

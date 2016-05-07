@@ -5,16 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
-class HomeController extends Controller
+class HomeController extends BaseController
 {
     public function index()
     {
         return view('pages.index');
     }
 
-    public function store()
+    protected function getSelectedMenu()
     {
-        return 'store';
+        return 'home';
     }
 
 }

@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="row">
-                        @include('partials.product.images')
+                        @include('old_views.single_product.images')
 
                         <div class="col-sm-6">
                             <div class="product-inner">
@@ -44,8 +44,8 @@
                                         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Reviews</a></li>
                                     </ul>
                                     <div class="tab-content">
-                                        @include('partials.product.description')
-                                        @include('partials.product.review')
+                                        @include('old_views.single_product.description')
+                                        @include('old_views.single_product.review')
                                     </div>
                                 </div>
 
@@ -53,7 +53,7 @@
                         </div>
                     </div>
 
-                    @include('partials.product.related-products')
+                    @include('old_views.single_product.related-products')
 
                 </div>
             </div>

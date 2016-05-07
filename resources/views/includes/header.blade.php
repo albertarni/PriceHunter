@@ -71,14 +71,13 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{route('home.index')}}">Home</a></li>
-                    <li><a href="{{route('shop.index')}}">Shop page</a></li>
-                    <li><a href="{{route('product.index')}}">Single product</a></li>
-                    <li><a href="{{route('cart.index')}}">Cart</a></li>
-                    <li><a href="{{route('checkout.index')}}">Checkout</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li><a href="#">Others</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="{{ $selected_menu == 'home' ? 'active' : '' }}"><a href="{{route('home.index')}}">Home</a></li>
+                    <li class="{{ $selected_menu == 'products' ? 'active' : '' }}"><a href="{{route('products.index')}}">Products</a></li>
+                    <li class="{{ $selected_menu == 'cart' ? 'active' : '' }}"><a href="{{route('cart.index')}}">Cart</a></li>
+                    <li class="{{ $selected_menu == 'checkout' ? 'active' : '' }}"><a href="{{route('checkout.index')}}">Checkout</a></li>
+                    <li class="{{ $selected_menu == '' ? 'active' : '' }}"><a href="#">Category</a></li>
+                    <li class="{{ $selected_menu == '' ? 'active' : '' }}"><a href="#">Others</a></li>
+                    <li class="{{ $selected_menu == '' ? 'active' : '' }}"><a href="#">Contact</a></li>
                 </ul>
             </div>
         </div>

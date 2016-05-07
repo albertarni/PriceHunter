@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class CheckoutController extends BaseController
+class ProductsController extends BaseController
 {
     public function index()
     {
-        return view('pages.checkout');
+        return view('pages.products');
     }
 
     protected function getSelectedMenu()
     {
-        return 'checkout';
+        return 'products';
     }
 }
