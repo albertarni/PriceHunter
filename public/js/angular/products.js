@@ -1,7 +1,12 @@
 var app = angular.module('productsApp', []);
 
-app.controller('ProductsCtrl', function ($scope, $http) {
+app.controller('ProductsCtrl', function ($scope, $http, $location, $anchorScroll) {
     $scope.current_page = 1;
+
+    $scope.goToTop = function () {
+        $location.hash('mainmenu-area');
+        $anchorScroll();
+    };
 
     $scope.isActivePage = function (page) {
         return $scope.current_page == page;
@@ -14,6 +19,8 @@ app.controller('ProductsCtrl', function ($scope, $http) {
     $scope.goToPage = function (page) {
         $scope.current_page = page;
         $scope.refresh();
+
+        $scope.goToTop();
     };
 
     $scope.refresh = function () {

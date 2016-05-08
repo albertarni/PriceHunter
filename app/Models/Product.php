@@ -9,4 +9,9 @@ class Product extends Model
     const T = 'products';
 
     protected $fillable = ['name', 'price'];
+
+    public function images()
+    {
+        return $this->belongsToMany(Image::class);
+    }
 }
